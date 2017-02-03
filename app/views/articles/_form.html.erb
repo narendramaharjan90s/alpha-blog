@@ -1,23 +1,33 @@
-<% if @article.errors.any? %>
-<h3>The Following errors prevented the articles from getting created...</h3>
-<ul>
-    <% @article.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-    <% end %>
-</ul>
-<% end %>
-<%= form_for @article do |f| %>
-    <p>
-        <%= f.label :title %></br>
-        <%= f.text_field :title %>
-    </p>
-    <p>
-        <%= f.label :description %></br>
-        <%= f.text_area :description %>
-    </p>
-    <p>
-        <%= f.submit %>
-    </p>
-<% end %>
+<div class="container">
+    <div class="well">
+        <% if @article.errors.any? %>
+        <h3>The Following errors prevented the articles from getting created...</h3>
+        <ul>
+            <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
+        <% end %>
+        <%= form_for @article do |f| %>
+            <p>
+                <div class="form-group">
+                    <%= f.label :title %></br>
+                    <%= f.text_field :title %>
+                </div>
+            </p>
+            <p>
+                <div class="form-group">
+                    <%= f.label :description %></br>
+                    <%= f.text_area :description %>
+                </div>
+            </p>
+            <p>
+                <div class="form-group">
+                    <%= f.submit %>
+                </div>
+            </p>
+        <% end %>
+    </div>
+</div>
 
 <%= link_to "Back to Articles Listing", articles_path %>
