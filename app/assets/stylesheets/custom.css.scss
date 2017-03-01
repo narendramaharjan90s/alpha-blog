@@ -30,8 +30,8 @@ $navbar-default-bg: #1ce;
 }
 
 .jumbotron h1, p {
-    color: red;
-    text-align: center;
+    color: black;
+    text-align: left;
     margin-bottom: 30px;
     letter-spacing: -1px;
     font-weight: bold;
@@ -41,6 +41,15 @@ $navbar-default-bg: #1ce;
 .btn-xlarge {
     font-size: 1.7em;
     background-color: red;
+}
+
+.article-actions {
+    border-top: 1px solid #eaeaea;
+
+}
+
+.description {
+    margin-top: 0;
 }
 
 footer {
